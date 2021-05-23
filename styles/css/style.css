@@ -16,6 +16,18 @@ a {
   cursor: pointer;
 }
 
+p {
+  color: #a39daa;
+}
+
+.mt-16 {
+  margin-top: 1rem;
+}
+
+main {
+  position: relative;
+}
+
 .bg-pattern {
   z-index: -1;
   position: absolute;
@@ -37,18 +49,18 @@ a {
   }
 }
 .bg-pattern--right {
-  display: none;
   opacity: 0.02;
   width: 37.5rem;
-  bottom: 0;
-  right: -15rem;
+  right: -26.25rem;
+  bottom: -6.25rem;
   border-top-left-radius: 200% 120%;
   border-top-right-radius: 200% 120%;
   background-size: cover;
 }
 @media (min-width: 768px) {
   .bg-pattern--right {
-    display: initial;
+    bottom: 0;
+    right: -15rem;
   }
 }
 
@@ -80,6 +92,7 @@ a {
   margin-bottom: 1.5rem;
   font-size: 2.5rem;
   font-weight: 500;
+  color: #3e2753;
 }
 .description p {
   line-height: 1.75rem;
@@ -95,7 +108,8 @@ a {
 .mobile {
   position: relative;
   width: 15.625rem;
-  height: 28.125rem;
+  min-height: 28.125rem;
+  padding-bottom: 1rem;
   border: 0.75rem solid #fff;
   border-radius: 2rem;
   background-color: #f5f3f7;
@@ -110,7 +124,7 @@ a {
 }
 .mobile__notch {
   width: 7.8125rem;
-  height: 2.5rem;
+  min-height: 2.5rem;
   background-color: #fff;
   position: absolute;
   top: -1.25rem;
@@ -120,9 +134,132 @@ a {
   border-radius: 0.9375rem;
 }
 .mobile__header {
+  padding: 1rem 1rem 0;
   width: 100%;
   height: 4.375rem;
+  border-radius: 0.3125rem;
   background: linear-gradient(-90deg, #e942ff 0%, #8838ff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: white;
+}
+.mobile__header div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.mobile__header-avatar {
+  width: 1.5625rem;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+.mobile__header-profile p {
+  color: white;
+}
+.mobile__header-profile span {
+  font-weight: 300;
+  font-size: 0.5625rem;
+  color: #d89eff;
+}
+.mobile .chat {
+  padding: 0 0.625rem;
+}
+.mobile .chat__text {
+  font-size: 0.5rem;
+  font-weight: 400;
+  width: 65%;
+  padding: 0.625rem;
+  margin: 0.625rem 0;
+  border-radius: 0.75rem;
+}
+.mobile .chat__text--left {
+  color: #9241c8;
+  background-color: rgba(216, 158, 255, 0.2);
+  border-bottom-left-radius: 0.375rem;
+}
+.mobile .chat__text--right {
+  width: fit-content;
+  max-width: 65%;
+  background: #fff;
+  border-bottom-right-radius: 0.375rem;
+  box-shadow: 0px 5px 10px -4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0;
+  margin-left: auto;
+}
+.mobile .chat__picture {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+.mobile .chat__picture img {
+  width: 40px;
+  height: 40px;
+  border-radius: 0.625rem;
+}
+.mobile .chat__option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.5rem;
+  width: 80%;
+  padding: 0.75rem 0.625rem;
+  margin-bottom: 0.625rem;
+  background: linear-gradient(90deg, #e942ff 0%, #8838ff 100%);
+  border-radius: 0.75rem;
+}
+.mobile .chat__option--right {
+  border-bottom-left-radius: 0.375rem;
+}
+.mobile .chat__option-description {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  color: #fff;
+  opacity: 0.8;
+  font-weight: 200;
+}
+.mobile .chat__option-circle {
+  width: 0.875rem;
+  height: 0.875rem;
+  border-radius: 50%;
+  border: 1px solid #e570ff;
+  font-size: 0;
+}
+.mobile .chat__option-value {
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-right: 0.5rem;
+}
+.mobile .chat__form {
+  position: relative;
+}
+.mobile .chat__form input {
+  width: 100%;
+  padding: 0.625rem 0.625rem 0.625rem 1.25rem;
+  border: none;
+  border-radius: 3.125rem;
+  color: #a39daa;
+}
+.mobile .chat__form input::placeholder {
+  font-size: 0.6875rem;
+  color: #c6cacd;
+}
+.mobile .chat__form button {
+  cursor: pointer;
+  position: absolute;
+  right: 0.3125rem;
+  top: 14%;
+  width: 1.5625rem;
+  height: 1.5625rem;
+  border: none;
+  border-radius: 50%;
+  background-color: #3e2753;
+  color: #fff;
+  font-weight: 800;
 }
 
 /*# sourceMappingURL=style.css.map */

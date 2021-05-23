@@ -1,3 +1,7 @@
+main {
+	position: relative;
+}
+
 .bg-pattern {
 	z-index: -1;
 	position: absolute;
@@ -26,18 +30,19 @@
 	}
 
 	&--right {
-		display: none;
 		opacity: 0.02;
 		width: rem(600);
-		bottom: 0;
-		right: rem(-240);
+		right: rem(-420);
+		bottom: rem(-100);
+
 		border-top-left-radius: 200% 120%;
 		border-top-right-radius: 200% 120%;
 
 		background-size: cover;
 
 		@include desktop-sm {
-			display: initial;
+			bottom: 0;
+			right: rem(-240);
 		}
 	}
 }
@@ -73,6 +78,7 @@
 		margin-bottom: rem(24);
 		font-size: rem(40);
 		font-weight: 500;
+		color: $color-violet-dark;
 	}
 
 	p {
@@ -89,7 +95,8 @@
 .mobile {
 	position: relative;
 	width: rem(250);
-	height: rem(450);
+	min-height: rem(450);
+	padding-bottom: 1rem;
 
 	border: rem(12) solid #fff;
 	border-radius: rem(32);
@@ -106,7 +113,7 @@
 
 	&__notch {
 		width: rem(125);
-		height: rem(40);
+		min-height: rem(40);
 		background-color: #fff;
 
 		position: absolute;
@@ -119,13 +126,171 @@
 	}
 
 	&__header {
+		padding: 1rem 1rem 0;
 		width: 100%;
 		height: rem(70);
+
+		border-radius: rem(5);
 
 		background: linear-gradient(
 			-90deg,
 			$color-magenta-light 0%,
 			$color-violet-light 100%
 		);
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		div:first-child {
+			display: flex;
+			align-items: center;
+			gap: rem(8);
+		}
+
+		font-size: rem(12);
+
+		color: $color-white;
+
+		&-avatar {
+			width: rem(25);
+			border-radius: 50%;
+			border: 1px solid #fff;
+		}
+
+		&-profile {
+			p {
+				color: $color-white;
+			}
+			span {
+				font-weight: 300;
+				font-size: rem(9);
+				color: $color-pink-light;
+			}
+		}
+	}
+
+	.chat {
+		padding: 0 rem(10);
+
+		&__text {
+			font-size: rem(8);
+			font-weight: 400;
+
+			width: 65%;
+			padding: rem(10);
+			margin: rem(10) 0;
+			border-radius: rem(12);
+
+			&--left {
+				color: $color-violet;
+				background-color: rgba($color-pink-light, 0.2);
+				border-bottom-left-radius: rem(6);
+			}
+
+			&--right {
+				width: fit-content;
+				max-width: 65%;
+				background: #fff;
+				border-bottom-right-radius: rem(6);
+				box-shadow: 0px 5px 10px -4px rgb(0, 0, 0, 0.1);
+				margin-bottom: 0;
+				margin-left: auto;
+			}
+		}
+
+		&__picture {
+			margin-top: 1rem;
+			display: flex;
+			justify-content: flex-end;
+			gap: rem(8);
+
+			img {
+				width: 40px;
+				height: 40px;
+				border-radius: rem(10);
+			}
+		}
+
+		&__option {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			font-size: rem(8);
+
+			width: 80%;
+			padding: rem(12) rem(10);
+			margin-bottom: rem(10);
+
+			background: linear-gradient(
+				90deg,
+				$color-magenta-light 0%,
+				$color-violet-light 100%
+			);
+
+			border-radius: rem(12);
+
+			&--right {
+				border-bottom-left-radius: rem(6);
+			}
+
+			&-description {
+				display: flex;
+				align-items: center;
+				gap: rem(10);
+				color: #fff;
+				opacity: 0.8;
+				font-weight: 200;
+			}
+
+			&-circle {
+				width: rem(14);
+				height: rem(14);
+				border-radius: 50%;
+				border: 1px solid hsl(289, 100%, 72%);
+				font-size: 0;
+			}
+
+			&-value {
+				color: $color-white;
+				font-size: rem(14);
+				font-weight: 500;
+				margin-right: rem(8);
+			}
+		}
+
+		&__form {
+			position: relative;
+			input {
+				width: 100%;
+				padding: rem(10) rem(10) rem(10) rem(20);
+				border: none;
+				border-radius: rem(50);
+
+				color: $color-gray-light;
+
+				&::placeholder {
+					font-size: rem(11);
+					color: $color-placeholder;
+				}
+			}
+
+			button {
+				cursor: pointer;
+				position: absolute;
+				right: rem(5);
+				top: 14%;
+
+				width: rem(25);
+				height: rem(25);
+
+				border: none;
+				border-radius: 50%;
+				background-color: $color-violet-dark;
+
+				color: #fff;
+				font-weight: 800;
+			}
+		}
 	}
 }
