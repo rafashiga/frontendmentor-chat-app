@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  background-color: #f5f3f7;
+  overflow-x: hidden;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+.bg-pattern {
+  z-index: -1;
+  position: absolute;
+  height: 85vh;
+  background: linear-gradient(223deg, #e942ff 0%, #8838ff 60%);
+}
+.bg-pattern--left {
+  width: 26.875rem;
+  left: -15rem;
+  top: -12.5rem;
+  border-bottom-left-radius: 200% 120%;
+  border-bottom-right-radius: 200% 120%;
+}
+@media (min-width: 768px) {
+  .bg-pattern--left {
+    width: 26.25rem;
+    left: -3.125rem;
+    top: 0;
+  }
+}
+.bg-pattern--right {
+  display: none;
+  opacity: 0.02;
+  width: 37.5rem;
+  bottom: 0;
+  right: -15rem;
+  border-top-left-radius: 200% 120%;
+  border-top-right-radius: 200% 120%;
+  background-size: cover;
+}
+@media (min-width: 768px) {
+  .bg-pattern--right {
+    display: initial;
+  }
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0;
+  width: 84%;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .home {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
+    margin: 0 auto;
+    min-height: 100vh;
+    padding: 0;
+  }
+}
+
+.description {
+  margin-top: 4rem;
+  text-align: center;
+}
+.description h1 {
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+.description p {
+  line-height: 1.75rem;
+}
+@media (min-width: 768px) {
+  .description {
+    width: 52%;
+    margin-top: 0;
+    text-align: left;
+  }
+}
+
+.mobile {
+  position: relative;
+  width: 15.625rem;
+  height: 28.125rem;
+  border: 0.75rem solid #fff;
+  border-radius: 2rem;
+  background-color: #f5f3f7;
+  box-shadow: 0px 0px 14px 2px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .mobile {
+    width: 17.5rem;
+    height: 34.375rem;
+  }
+}
+.mobile__notch {
+  width: 7.8125rem;
+  height: 2.5rem;
+  background-color: #fff;
+  position: absolute;
+  top: -1.25rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 0.9375rem;
+}
+.mobile__header {
+  width: 100%;
+  height: 4.375rem;
+  background: linear-gradient(-90deg, #e942ff 0%, #8838ff 100%);
+}
+
+/*# sourceMappingURL=style.css.map */

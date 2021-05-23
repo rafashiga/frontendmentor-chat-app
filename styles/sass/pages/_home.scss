@@ -1,0 +1,131 @@
+.bg-pattern {
+	z-index: -1;
+	position: absolute;
+
+	height: 85vh;
+
+	background: linear-gradient(
+		223deg,
+		$color-magenta-light 0%,
+		$color-violet-light 60%
+	);
+
+	&--left {
+		width: rem(430);
+		left: rem(-240);
+		top: rem(-200);
+
+		border-bottom-left-radius: 200% 120%;
+		border-bottom-right-radius: 200% 120%;
+
+		@include desktop-sm {
+			width: rem(420);
+			left: rem(-50);
+			top: 0;
+		}
+	}
+
+	&--right {
+		display: none;
+		opacity: 0.02;
+		width: rem(600);
+		bottom: 0;
+		right: rem(-240);
+		border-top-left-radius: 200% 120%;
+		border-top-right-radius: 200% 120%;
+
+		background-size: cover;
+
+		@include desktop-sm {
+			display: initial;
+		}
+	}
+}
+
+.home {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	padding: rem(64) 0;
+
+	width: 84%;
+	margin: 0 auto;
+
+	@include desktop-sm {
+		flex-direction: row;
+		justify-content: space-between;
+
+		width: 60%;
+		margin: 0 auto;
+		min-height: 100vh;
+
+		padding: 0;
+	}
+}
+
+.description {
+	margin-top: rem(64);
+	text-align: center;
+
+	h1 {
+		margin-bottom: rem(24);
+		font-size: rem(40);
+		font-weight: 500;
+	}
+
+	p {
+		line-height: rem(28);
+	}
+
+	@include desktop-sm {
+		width: 52%;
+		margin-top: 0;
+		text-align: left;
+	}
+}
+
+.mobile {
+	position: relative;
+	width: rem(250);
+	height: rem(450);
+
+	border: rem(12) solid #fff;
+	border-radius: rem(32);
+
+	background-color: $mobile-color-background;
+	box-shadow: 0px 0px 14px 2px rgb(0, 0, 0, 0.1);
+
+	overflow: hidden;
+
+	@include desktop-sm {
+		width: rem(280);
+		height: rem(550);
+	}
+
+	&__notch {
+		width: rem(125);
+		height: rem(40);
+		background-color: #fff;
+
+		position: absolute;
+		top: rem(-20);
+		left: 0;
+		right: 0;
+		margin: auto;
+
+		border-radius: rem(15);
+	}
+
+	&__header {
+		width: 100%;
+		height: rem(70);
+
+		background: linear-gradient(
+			-90deg,
+			$color-magenta-light 0%,
+			$color-violet-light 100%
+		);
+	}
+}
