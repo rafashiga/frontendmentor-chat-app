@@ -168,6 +168,11 @@ main {
 				color: $color-pink-light;
 			}
 		}
+
+		&-menu::after {
+			content: '\2807';
+			font-size: rem(16);
+		}
 	}
 
 	.chat {
@@ -181,6 +186,10 @@ main {
 			padding: rem(10);
 			margin: rem(10) 0;
 			border-radius: rem(12);
+
+			@include desktop-sm {
+				width: 55%;
+			}
 
 			&--left {
 				color: $color-violet;
@@ -196,6 +205,10 @@ main {
 				box-shadow: 0px 5px 10px -4px rgb(0, 0, 0, 0.1);
 				margin-bottom: 0;
 				margin-left: auto;
+
+				@include desktop-sm {
+					max-width: 55%;
+				}
 			}
 		}
 
@@ -292,5 +305,25 @@ main {
 				font-weight: 800;
 			}
 		}
+	}
+}
+
+.arrow {
+	border: solid $color-white;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 3px;
+	margin-left: -2px;
+
+	&--right {
+		transform: rotate(-45deg);
+		-webkit-transform: rotate(-45deg);
+	}
+
+	&--left {
+		border-width: 0 2px 2px 0;
+		padding: 3px;
+		transform: rotate(135deg);
+		-webkit-transform: rotate(135deg);
 	}
 }
