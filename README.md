@@ -1,5 +1,5 @@
 <h1 align="center">
-  Frontend Mentor - Chat App
+  Frontend Mentor - Chat app CSS illustration
 </h1>
 
 <h3 align="center">
