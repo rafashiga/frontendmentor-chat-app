@@ -295,4 +295,19 @@ main {
   -webkit-transform: rotate(135deg);
 }
 
+.attribution {
+  text-align: center;
+  color: #a39daa;
+  font-size: 0.875rem;
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.attribution a {
+  color: #8838ff;
+  font-weight: 700;
+}
+
 /*# sourceMappingURL=style.css.map */

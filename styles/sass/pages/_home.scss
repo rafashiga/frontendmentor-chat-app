@@ -327,3 +327,20 @@ main {
 		-webkit-transform: rotate(135deg);
 	}
 }
+
+.attribution {
+	text-align: center;
+	color: $color-gray-light;
+	font-size: rem(14);
+
+	position: absolute;
+	bottom: rem(16);
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+
+	a {
+		color: $color-violet-light;
+		font-weight: 700;
+	}
+}
